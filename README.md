@@ -4,7 +4,7 @@
 
 ## Buit at ETHGlobal:Istanbul 
 
-**Uniroll is essentially a payroll streaming service based on Cowswap's programmatic orders.**</br>
+**Uniroll is essentially a flexible payroll streaming service based on Cowswap's programmatic orders.**</br>
 
 1. The Treasury/Employer/DAO determines the amount and tops up the treasury with their own or any token.</br> 
 2. Receivers choose the token and chain of their choice, and then payments are regularly swapped from the treasury's token to the token of the receiver's choice and streamed regularly using programmatic orders.</br> 
