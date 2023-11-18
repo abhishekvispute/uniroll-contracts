@@ -16,6 +16,8 @@ contract PayrollHandler is Ownable{
     IERC20 public sellToken;
     mapping (address => ReceiversConfig) public config; 
     address[] public receivers;
+    
+    mapping(IERC20 => bool) public enabledTokens;
 
     constructor(IERC20 _sellToken) Ownable(msg.sender) {
         sellToken = _sellToken;
@@ -33,6 +35,17 @@ contract PayrollHandler is Ownable{
             if (config[newReceiverAddresses[i]].lastPaid !=0) receivers.push(newReceiverAddresses[i]);
             config[newReceiverAddresses[i]].lastPaid = block.timestamp;
         }
+    }
+
+    function enableTokens(IERC20 token, bool enabled) external onlyOwner {
+        enabledTokens[token] = enabled;
+    }
+
+    function configurePayroll(IERC20 token) external {
+       require(enabledTokens[token], "Token disabled");
+       ReceiversConfig storage cfg = config[msg.sender];
+       require(cfg.lastPaid > 0, "No payrol found");
+       cfg.token = token;
     }
 
 
