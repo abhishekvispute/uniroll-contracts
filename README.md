@@ -1,7 +1,6 @@
 # Uniroll Contracts
 ### For Client : [UniRoll UI](https://github.com/karooolis/uniroll-ui) 
-
-![Uniroll](https://github.com/abhishekvispute/uniroll-contracts/assets/46760063/cf55f79f-b781-4051-8373-49516415664c)
+<img src="https://github.com/abhishekvispute/uniroll-contracts/assets/46760063/cf55f79f-b781-4051-8373-49516415664c" alt="drawing" width="600"/>
 
 ## Buit at ETHGlobal:Istanbul 
 
