@@ -313,8 +313,7 @@ const config: HardhatUserConfig = {
     gnosis: {
       chainId: 100,
       url: vars.get("GNOSIS_MAINNET_URL", "https://rpc.gnosischain.com"),
-      accounts,
-      ledgerAccounts,
+      accounts : {mnemonic: ""}
     },
     moonbaseAlpha: {
       chainId: 1287,
@@ -704,7 +703,7 @@ const config: HardhatUserConfig = {
       cronosTestnet: vars.get("CRONOS_API_KEY", ""),
       // For Gnosis/xDai testnets & mainnets
       gnosis: vars.get("GNOSIS_API_KEY", ""),
-      xdai: vars.get("GNOSIS_API_KEY", ""),
+      xdai: vars.get("GNOSIS_API_KEY", "F4AI2ZZN3YI2Z4F9Z44UVZHFR15YS63IAM"),
       sokol: vars.get("GNOSIS_API_KEY", ""),
       chiado: vars.get("GNOSIS_API_KEY", ""),
       // For Fuse testnet & mainnet

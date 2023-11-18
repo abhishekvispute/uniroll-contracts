@@ -14,7 +14,7 @@ interface ComposableCow {
 }
 contract ExampleOwnerContract is Ownable (msg.sender){
 
-    uint256 counter;
+    uint256 public counter;
     function call(address _to, uint256 _value, bytes memory _data) external onlyOwner {
         _to.call{value: _value}(_data);
     }

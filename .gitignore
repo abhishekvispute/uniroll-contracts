@@ -14,6 +14,7 @@
 
 # Dependency directory
 node_modules
+hardhat.config.ts
 
 # dotenv environment variable files
 .env

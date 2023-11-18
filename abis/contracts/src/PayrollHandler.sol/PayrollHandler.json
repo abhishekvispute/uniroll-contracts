@@ -3,9 +3,16 @@
   "error OwnableInvalidOwner(address)",
   "error OwnableUnauthorizedAccount(address)",
   "event OwnershipTransferred(address indexed,address indexed)",
+  "function config(address) view returns (uint256, address, uint32, uint256, uint256)",
+  "function getConfigs(uint256) view returns (tuple(uint256,address,uint32,uint256,uint256))",
+  "function getReceivers() view returns (address[])",
   "function getTradeableOrder(address,address,bytes32,bytes,bytes) view returns (tuple(address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32))",
   "function modifyPayRollBatch(address[],tuple(uint256,address,uint32,uint256,uint256)[])",
   "function owner() view returns (address)",
+  "function receivers(uint256) view returns (address)",
   "function renounceOwnership()",
+  "function resuce(address,uint256)",
+  "function sellToken() view returns (address)",
+  "function supportsInterface(bytes4) view returns (bool)",
   "function transferOwnership(address)"
 ]

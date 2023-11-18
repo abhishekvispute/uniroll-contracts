@@ -4,5 +4,5 @@
 
 // eslint-disable-next-line no-undef
 module.exports = [
-  "Hello, Hardhat!", // The example Greeter.sol file needs a string
+  "0x712b3d230F3C1c19db860d80619288b1F0BDd0Bd", // The example Greeter.sol file needs a string
 ];

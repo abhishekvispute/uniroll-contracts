@@ -3,6 +3,7 @@
   "error OwnableUnauthorizedAccount(address)",
   "event OwnershipTransferred(address indexed,address indexed)",
   "function call(address,uint256,bytes)",
+  "function counter() view returns (uint256)",
   "function createOrder(address,address)",
   "function isValidSignature(bytes32,bytes) view returns (bytes4)",
   "function owner() view returns (address)",
