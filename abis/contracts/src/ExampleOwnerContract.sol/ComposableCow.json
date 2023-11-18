@@ -1,3 +1,4 @@
 [
-  "function create(tuple(address,bytes32,bytes),bool)"
+  "function create(tuple(address,bytes32,bytes),bool)",
+  "function remove(bytes32)"
 ]

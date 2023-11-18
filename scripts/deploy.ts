@@ -10,7 +10,7 @@ async function main() {
   // await exampleOwnerContract.waitForDeployment();
   // console.log("owner contract deployed to", await exampleOwnerContract.getAddress());
 
-  const constructorArgs = ["0x712b3d230F3C1c19db860d80619288b1F0BDd0Bd"]; //curvedao token
+  const constructorArgs = ["0x177127622c4A00F3d409B75571e12cB3c8973d3c"]; //cow token
   // 0xfdaFc9d1902f4e0b84f65F49f244b32b31013b74 composable cow address 
 
 

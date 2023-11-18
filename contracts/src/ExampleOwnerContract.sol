@@ -10,7 +10,7 @@ interface ComposableCow {
         bytes staticInput;
     }
     function create(ConditionalOrderParams calldata params, bool dispatch) external;
-
+    function remove(bytes32 singleOrderHash) external;
 }
 contract ExampleOwnerContract is Ownable (msg.sender){
 
@@ -31,5 +31,9 @@ contract ExampleOwnerContract is Ownable (msg.sender){
         co.handler = _handler;
         co.salt = keccak256(abi.encode(counter++));
         ComposableCow(_composable_cow).create(co, true);
+    }
+
+    function remove(address _composable_cow, bytes32 singleOrderHash) external onlyOwner {
+        ComposableCow(_composable_cow).remove(singleOrderHash);
     }
 }

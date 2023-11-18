@@ -7,6 +7,7 @@
   "function createOrder(address,address)",
   "function isValidSignature(bytes32,bytes) view returns (bytes4)",
   "function owner() view returns (address)",
+  "function remove(address,bytes32)",
   "function renounceOwnership()",
   "function resuce(address,uint256)",
   "function transferOwnership(address)"
