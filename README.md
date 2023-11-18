@@ -13,7 +13,7 @@ However, currently, we could implement and execute only the first part end-to-en
 The second part remains incomplete as of now. </br>
 </br>
 
-We think this level of personalization is required in our diverse world, since contributors/receivers might have preferences for certain tokens or blockchains due to factors like base location, transaction fees, processing times, or personal preferences. </br>
+We think this level of personalization and flexibility is required in our diverse world, since contributors/receivers might have preferences for certain tokens or blockchains due to factors like base location, transaction fees, processing times, or personal preferences. </br>
 The codebase currently is buggy; for example, ERC-1271 always returns true, so please don't use this in production. </br>
 
 
