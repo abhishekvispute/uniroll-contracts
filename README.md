@@ -1,182 +1,33 @@
-# Fully-Fledged Hardhat Project Template Based on TypeScript
+# Uniroll Contracts
+### For Client : [UniRoll UI](https://github.com/karooolis/uniroll-ui) 
 
-[![🕵️‍♂️ Test smart contracts](https://github.com/pcaversaccio/hardhat-project-template-ts/actions/workflows/test-contracts.yml/badge.svg)](https://github.com/pcaversaccio/hardhat-project-template-ts/actions/workflows/test-contracts.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/mit/)
+![Uniroll](https://github.com/abhishekvispute/uniroll-contracts/assets/46760063/cf55f79f-b781-4051-8373-49516415664c)
 
-## Installation
+## Buit at ETHGlobal:Istanbul 
 
-It is recommended to install [`pnpm`](https://pnpm.io) through the `npm` package manager, which comes bundled with [Node.js](https://nodejs.org/en) when you install it on your system. It is recommended to use a Node.js version `>= 18.0.0`.
+**Uniroll is essentially a payroll streaming service based on Cowswap's programmatic orders.**</br>
 
-Once you have `npm` installed, you can run the following both to install and upgrade `pnpm`:
+The Treasury/Employer/DAO determines the amount and tops up the treasury with their own or any token.</br> 
+Receivers choose the token and chain of their choice, and then payments are regularly swapped from the treasury's token to the token of the receiver's choice and streamed regularly using programmatic orders.</br> 
+We also planned to bridge them to the chain of the receiver's choice using hooks.</br> 
+However, currently, we could implement and execute only the first part end-to-end, due to time constraints. </br>
+The second part remains incomplete as of now. </br>
+</br>
+We think this level of personalization is required in our diverse world, since contributors/receivers might have preferences for certain tokens or blockchains due to factors like base location, transaction fees, processing times, or personal preferences. </br>
+The codebase currently is buggy; for example, ERC-1271 always returns true, so please don't use this in production. </br>
 
-```console
-npm install -g pnpm
-```
 
-After having installed `pnpm`, simply run:
 
-```console
-pnpm install
-```
+## Deployments
 
-## Running Deployments
+Mainnet : Gnosis, We test in Production :) </br>
+- Payroll(Handler): https://gnosisscan.io/address/0x467751B9224f7828b37e2c242F7c37F1f8b91A0D#readContract </br>
+- Treasury(Owner): https://gnosisscan.io/address/0xdc541fc451c34f8a4ff5f3e21f8f7af224b912cf#tokentxns </br>
 
-> **Note**<br>
-> The deployment script [`deploy.ts`](https://github.com/pcaversaccio/hardhat-project-template-ts/blob/main/scripts/deploy.ts) attempts to automatically verify the contract on the target chain after deployment. If you have not configured an API key, the verification will fail.
-
-**Example Goerli:**
-
-```console
-pnpm deploy:goerli
-```
-
-> The deployment script [`deploy.ts`](./scripts/deploy.ts) includes the `tenderly` Hardhat Runtime Environment (HRE) extension with the `verify` method. Please consider uncommenting and configuring the Tenderly `project`, `username`, `forkNetwork`, `privateVerification`, and `deploymentsDir` attributes in the [`hardhat.config.ts`](./hardhat.config.ts) file before deploying or remove this call. Also, for this plugin to function you need to create a `config.yaml` file at `$HOME/.tenderly/config.yaml` or `%HOMEPATH%\.tenderly\config.yaml` and add an `access_key` field to it. For further information, see [here](https://www.npmjs.com/package/@tenderly/hardhat-tenderly#installing-tenderly-cli).
-
-> For the deployment on the [zkSync Era](https://era.zksync.io/docs/) test network, you must add your to-be-deployed contract artifact to [`deploy-zksync.ts`](./deploy/deploy-zksync.ts), enable `zksync` in the [`hardhat.config.ts`](./hardhat.config.ts#L121) file, and then run `pnpm compile`. Next, fund your deployer account on zkSync Era Testnet, setup the zkSync-related configuration variables accordingly, and simply run `pnpm deploy:zksynctestnet`. Eventually, to verify the contract you can invoke: `npx hardhat verify --network zkSyncTestnet --constructor-args arguments.js <YOUR_CONTRACT_ADDRESS>`. The same approach applies if you want to deploy on the production network, except that you need to run `pnpm deploy:zksyncmain` and use `--network zkSyncMain` for the contract verification.
-
-## Running `CREATE2` Deployments
-
-```console
-pnpm xdeploy
-```
-
-This template uses the [xdeploy](https://github.com/pcaversaccio/xdeployer) Hardhat plugin. Check out the documentation for more information on the specifics of the deployments.
-
-## Configuration Variables
-
-Run `npx hardhat vars set PRIVATE_KEY` to set the private key of your wallet. This allows secure access to your wallet to use with both testnet and mainnet funds during Hardhat deployments.
-
-You can also run `npx hardhat vars setup` to see which other [configuration variables](https://hardhat.org/hardhat-runner/docs/guides/configuration-variables) are available.
-
-## Using a Ledger Hardware Wallet
-
-This template implements the [`hardhat-ledger`](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-ledger) plugin. Run `npx hardhat set LEDGER_ACCOUNT` and enter the address of the Ledger account you want to use.
-
-## Using the Truffle Dashboard
-
-> **Note**<br>
-> Truffle has been [sunsetted](https://consensys.io/blog/consensys-announces-the-sunset-of-truffle-and-ganache-and-new-hardhat) by Consensys, but I still keep it in the template as I find it a very valuable tool.
-
-[Truffle](https://trufflesuite.com) developed the [Truffle Dashboard](https://trufflesuite.com/docs/truffle/how-to/use-the-truffle-dashboard/) to provide an easy way to use your existing MetaMask wallet for your deployments and for other transactions that you need to send from a command line context. Because the Truffle Dashboard connects directly to MetaMask it is also possible to use it in combination with hardware wallets like [Ledger](https://www.ledger.com) or [Trezor](https://trezor.io).
-
-First, it is recommended that you install Truffle globally by running:
-
-```console
-npm install -g truffle
-```
-
-> If you have already installed Truffle, you need to ensure that you have at least version [`5.11.5`](https://github.com/trufflesuite/truffle/releases/tag/v5.11.5) installed and otherwise upgrade.
-
-To start a Truffle Dashboard, you need to run the following command in a separate terminal window:
-
-```console
-truffle dashboard
-```
-
-By default, the command above starts a Truffle Dashboard at `http://localhost:24012` and opens the Dashboard in a new tab in your default browser. The Dashboard then prompts you to connect your wallet and confirm that you're connected to the right network. **You should double check your connected network at this point, since switching to a different network during a deployment can have unintended consequences.**
-
-Eventually, in order to deploy with the Truffle Dashboard, you can simply run:
-
-```console
-pnpm deploy:dashboard
-```
-
-## Mainnet Forking
-
-You can start an instance of the Hardhat network that forks the mainnet. This means that it will simulate having the same state as the mainnet, but it will work as a local development network. That way you can interact with deployed protocols and test complex interactions locally. To use this feature, you need to connect to an archive node.
-
-This template is currently configured via the [hardhat.config.ts](./hardhat.config.ts) as follows:
-
-```ts
-forking: {
-  url: vars.get("ETH_MAINNET_URL", ethMainnetUrl),
-  // The Hardhat network will by default fork from the latest mainnet block
-  // To pin the block number, specify it below
-  // You will need access to a node with archival data for this to work!
-  // blockNumber: 14743877,
-  // If you want to do some forking, set `enabled` to true
-  enabled: false,
-},
-```
-
-## Contract Verification
-
-Change the contract address to your contract after the deployment has been successful. This works for both testnet and mainnet. You will need to get an API key from [etherscan](https://etherscan.io), [snowtrace](https://snowtrace.io) etc.
-
-**Example:**
-
-```console
-npx hardhat verify --network fantomMain --constructor-args arguments.js <YOUR_CONTRACT_ADDRESS>
-```
-
-## Contract Interaction
-
-This template includes an [example script](./scripts/interact.ts) that shows how to interact programmatically with a deployed contract. You must customise it according to your contract's specifications. The script can be simply invoked via:
-
-```console
-npx hardhat run scripts/interact.ts --network <network_name>
-```
-
-## Foundry
-
-This template repository also includes the [Foundry](https://github.com/foundry-rs/foundry) toolkit as well as the [`@nomicfoundation/hardhat-foundry`](https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry) plugin.
-
-> If you need help getting started with Foundry, I recommend reading the [📖 Foundry Book](https://book.getfoundry.sh).
-
-### Dependencies
-
-```console
-make update
-```
-
-or
-
-```console
-forge update
-```
-
-### Compilation
-
-```console
-make build
-```
-
-or
-
-```console
-forge build
-```
-
-### Testing
-
-To run only TypeScript tests:
-
-```console
-pnpm test:hh
-```
-
-To run only Solidity tests:
-
-```console
-pnpm test:forge
-```
-
-or
-
-```console
-make test-forge
-```
-
-To additionally display the gas report, you can run:
-
-```console
-make test-gasreport
-```
-
-### Deployment and Etherscan Verification
-
-Inside the [`scripts/`](./scripts) folder are a few preconfigured scripts that can be used to deploy and verify contracts via Foundry. These scripts are required to be _executable_ meaning they must be made executable by running:
-
-```console
-make scripts
-```
+1. Example of Creation of Programmtic Order </br>
+https://gnosisscan.io/tx/0x7c551dccbac3fbde4dd82c8a612f0342cefe66ca3035cb5304fe3356b680df73 </br>
+2. Examples of Execution of Programmtic Order  </br>
+Cow being swapped into USDC and streamed </br>
+https://gnosisscan.io/address/0xdc541fc451c34f8a4ff5f3e21f8f7af224b912cf#tokentxns </br>
+Curve being swapped into USDC and streamed </br>
+https://gnosisscan.io/tx/0x13582ff822cd62065ee7305b76b5c8f3dd1999f8a298b9f3d19843daaec19d5e </br>
