@@ -6,12 +6,13 @@
 
 **Uniroll is essentially a payroll streaming service based on Cowswap's programmatic orders.**</br>
 
-The Treasury/Employer/DAO determines the amount and tops up the treasury with their own or any token.</br> 
-Receivers choose the token and chain of their choice, and then payments are regularly swapped from the treasury's token to the token of the receiver's choice and streamed regularly using programmatic orders.</br> 
+1. The Treasury/Employer/DAO determines the amount and tops up the treasury with their own or any token.</br> 
+2. Receivers choose the token and chain of their choice, and then payments are regularly swapped from the treasury's token to the token of the receiver's choice and streamed regularly using programmatic orders.</br> 
 We also planned to bridge them to the chain of the receiver's choice using hooks.</br> 
 However, currently, we could implement and execute only the first part end-to-end, due to time constraints. </br>
 The second part remains incomplete as of now. </br>
 </br>
+
 We think this level of personalization is required in our diverse world, since contributors/receivers might have preferences for certain tokens or blockchains due to factors like base location, transaction fees, processing times, or personal preferences. </br>
 The codebase currently is buggy; for example, ERC-1271 always returns true, so please don't use this in production. </br>
 
