@@ -22,9 +22,9 @@ Mainnet : Gnosis, We test in Production :) </br>
 - Payroll(Handler): https://gnosisscan.io/address/0x467751B9224f7828b37e2c242F7c37F1f8b91A0D#readContract </br>
 - Treasury(Owner): https://gnosisscan.io/address/0xdc541fc451c34f8a4ff5f3e21f8f7af224b912cf#tokentxns </br>
 
-1. Example of Creation of Programmtic Order </br>
+1. Example of Creation of Programmatic Order </br>
 https://gnosisscan.io/tx/0x7c551dccbac3fbde4dd82c8a612f0342cefe66ca3035cb5304fe3356b680df73 </br>
-2. Examples of Execution of Programmtic Order  </br>
+2. Examples of Execution of Programmatic Order  </br>
 Cow being swapped into USDC and streamed </br>
 https://gnosisscan.io/address/0xdc541fc451c34f8a4ff5f3e21f8f7af224b912cf#tokentxns </br>
 Curve being swapped into USDC and streamed </br>
