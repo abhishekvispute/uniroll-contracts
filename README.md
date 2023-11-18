@@ -34,11 +34,8 @@ https://gnosisscan.io/tx/0x13582ff822cd62065ee7305b76b5c8f3dd1999f8a298b9f3d1984
 
 **URL:** [https://uniroll-ui.vercel.app/](https://uniroll-ui.vercel.app/)
 
-![photo_2023-11-19 01 37 39](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/11fc70a6-2101-4006-83ff-fab09c1c87ea)
-
-![photo_2023-11-19 01 37 40 (1)](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/a3cbd917-71f7-496b-add7-2dfb7beca493)
-
-![photo_2023-11-19 01 37 34](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/1bcc1529-1a79-4b81-8c1d-4004fba677d2)
-
-![photo_2023-11-19 01 37 42](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/8eeaadd6-20e2-4f9b-8771-bf33f1d3997f)
+![uniroll_1](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/1a44c173-7e58-49de-abb0-e5845d75900a)
+![uniroll_2](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/8367731e-ab6c-48cf-8fd5-833b2e056759)
+![uniroll_3](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/38050bd0-912b-4551-a10b-9d5abe19a6ae)
+![uniroll_4](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/bebf921d-5189-4e59-8ba7-53c2bcf622d8)
 
