@@ -65,6 +65,10 @@ contract PayrollHandler is Ownable{
             return order;
         }
     }
+
+    function getReceivers() public view returns (address[]) {
+        return receivers;
+    }
     
     // function verify() external returns (bool)
     // {
