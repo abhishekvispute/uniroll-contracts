@@ -30,9 +30,9 @@ https://gnosisscan.io/address/0xdc541fc451c34f8a4ff5f3e21f8f7af224b912cf#tokentx
 Curve being swapped into USDC and streamed </br>
 https://gnosisscan.io/tx/0x13582ff822cd62065ee7305b76b5c8f3dd1999f8a298b9f3d19843daaec19d5e </br>
 
-## Uniroll dApp
+## Uniroll UI
 
-URL: [https://uniroll-ui.vercel.app/](https://uniroll-ui.vercel.app/)
+**URL:** [https://uniroll-ui.vercel.app/](https://uniroll-ui.vercel.app/)
 
 ![photo_2023-11-19 01 37 39](https://github.com/abhishekvispute/uniroll-contracts/assets/3159964/11fc70a6-2101-4006-83ff-fab09c1c87ea)
 
